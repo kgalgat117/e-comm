@@ -5,7 +5,7 @@ git commit -m "some more"
 git push -u origin master
 
 expect "username:"
-send "kgalgat117@gmail.com"
+send "$2"
 
 expect "password:"
-send "<password>"
+send "$3"
