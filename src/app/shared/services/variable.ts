@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 
 export class Secret {
 
-    DOMAIN_NAME = 'http://localhost:4200/'
+    DOMAIN_NAME = 'http://localhost:3000/'
     HOST = 'localhost'
 
 }
