@@ -105,6 +105,38 @@
                 <label for="">user pan</label>
                 <input type="text" name="" id="">
               </div>
+              <h3>Company Details</h3>
+              <div class="form-group">
+                <label for="">company name</label>
+                <input type="text">
+              </div>
+              <h3>Address</h3>
+              <div class="form-group">
+                <label for="">line 1</label>
+                <input type="text" name="" id="">
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="">city</label>
+                  <input type="text">
+                </div>
+                <div class="form-group">
+                  <label for="">state</label>
+                  <input type="text">
+                </div>
+                <div class="form-group">
+                  <label for="">country</label>
+                  <input type="text">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="">GSTIN</label>
+                <input type="text">
+              </div>
+              <div class="form-group">
+                <label for="">PAN</label>
+                <input type="text">
+              </div>
               <div *ngIf="errorCodes.length > 0" class="form-group">
                 <p style="color: red;" *ngIf="errorCodes.indexOf(11000) != -1"> Email or Phone Already Exist</p>
               </div>
