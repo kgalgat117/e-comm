@@ -10,7 +10,7 @@ export class UserService {
 
   constructor(private http: HttpClient, private secret: Secret) { }
 
-  url = this.secret.DOMAIN_NAME + 'user/'
+  url = this.secret.DOMAIN_NAME + 'retailer/'
 
   userSignUp(data) {
     return this.http.post(this.url + 'signup', data)

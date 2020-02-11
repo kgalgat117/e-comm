@@ -13,9 +13,10 @@ export class SignupComponent implements OnInit {
 
   user: any = {
     email: '',
-    name: '',
-    password: '',
-    role: 'owner'
+    address: {},
+    company: {
+      address: {}
+    }
   }
 
   process: string = 'inactive'
@@ -29,7 +30,7 @@ export class SignupComponent implements OnInit {
       this.process = 'active'
       this.userService.userSignUp(this.user).subscribe(response => {
         console.log(response)
-        this.signin()
+        // this.signin()
       }, err => {
         this.process = 'inactive'
         if (err && err.error && err.error.code && err.error.code == 11000) {
@@ -44,24 +45,8 @@ export class SignupComponent implements OnInit {
     this.errorCodes.splice(this.errorCodes.indexOf(11000), 1)
   }
 
-  signin() {
-    this.userService.userSignIn(this.user).subscribe(response => {
-      console.log('user signup')
-      this.process = 'inactive'
-      this.cookieService.set('UID', response['token'], 1, '/', 'localhost');
-      if (response['user']['role'] == 'tenent') {
-        this.router.navigate(['/home'])
-      } else {
-        this.router.navigate(['/dashboard'])
-      }
-    }, err => {
-      this.process = 'inactive'
-      console.log(err)
-    })
-  }
-
   validateData() {
-    if (validator.isEmail(this.user.email) && this.user.name && this.user.password && this.user.cpassword && (this.user.password == this.user.cpassword) && this.user.role && validator.isMobilePhone(this.user.phone, 'en-IN')) {
+    if (validator.isEmail(this.user.email) && this.user.firstName && this.user.password && this.user.cpassword && (this.user.password == this.user.cpassword) && validator.isMobilePhone(this.user.phone, 'en-IN')) {
       return true
     }
     return false

@@ -53,8 +53,8 @@
               <div class="form-row">
                 <div class="form-group ">
                   <label>first Name</label>
-                  <input type="text" name="firstname" [(ngModel)]="user.firstName" class="form-control form-control-user"
-                    id="exampleFirstName" placeholder="First Name">
+                  <input type="text" name="firstname" [(ngModel)]="user.firstName"
+                    class="form-control form-control-user" id="exampleFirstName" placeholder="First Name">
                 </div>
                 <div class="form-group ">
                   <label>last Name</label>
@@ -85,20 +85,20 @@
               <h3>Address</h3>
               <div class="form-group">
                 <label for="">line 1</label>
-                <input type="text" name="address.type.line1" [(ngModel)]="user.address.type.line1">
+                <input type="text" name="address.line1" [(ngModel)]="user.address.line1">
               </div>
               <div class="form-row">
                 <div class="form-group">
                   <label for="">city</label>
-                  <input type="text" name="address.type.city" [(ngModel)]="user.address.type.city">
+                  <input type="text" name="address.city" [(ngModel)]="user.address.city">
                 </div>
                 <div class="form-group">
                   <label for="">state</label>
-                  <input type="text" name="address.type.state" [(ngModel)]="user.address.type.state">
+                  <input type="text" name="address.state" [(ngModel)]="user.address.state">
                 </div>
                 <div class="form-group">
                   <label for="">country</label>
-                  <input type="text" name="address.type.country" [(ngModel)]="user.address.type.country">
+                  <input type="text" name="address.country" [(ngModel)]="user.address.country">
                 </div>
               </div>
               <div class="form-group">
@@ -108,34 +108,34 @@
               <h3>Company Details</h3>
               <div class="form-group">
                 <label for="">company name</label>
-                <input type="text" name="company.type.name" [(ngModel)]="company.type.name">
+                <input type="text" name="user.company.name" [(ngModel)]="user.company.name">
               </div>
               <h3>Address</h3>
               <div class="form-group">
                 <label for="">line 1</label>
-                <input type="text" name="company.type.address.line1" [(ngModel)]="company.type.address.line1">
+                <input type="text" name="user.company.address.line1" [(ngModel)]="user.company.address.line1">
               </div>
               <div class="form-row">
                 <div class="form-group">
                   <label for="">city</label>
-                  <input type="text" name="company.type.address.city" [(ngModel)]="company.type.address.city">
+                  <input type="text" name="user.company.address.city" [(ngModel)]="user.company.address.city">
                 </div>
                 <div class="form-group">
                   <label for="">state</label>
-                  <input type="text" name="company.type.address.state" [(ngModel)]="company.type.address.state">
+                  <input type="text" name="user.company.address.state" [(ngModel)]="user.company.address.state">
                 </div>
                 <div class="form-group">
                   <label for="">country</label>
-                  <input type="text" name="company.type.address.country" [(ngModel)]="company.type.address.country">
+                  <input type="text" name="user.company.address.country" [(ngModel)]="user.company.address.country">
                 </div>
               </div>
               <div class="form-group">
                 <label for="">GSTIN</label>
-                <input type="text" name="company.type.address.gstin" [(ngModel)]="company.type.gstin">
+                <input type="text" name="user.company.address.gstin" [(ngModel)]="user.company.gstin">
               </div>
               <div class="form-group">
                 <label for="">PAN</label>
-                <input type="text" name="company.type.pan" [(ngModel)]="company.type.pan">
+                <input type="text" name="user.company.pan" [(ngModel)]="user.company.pan">
               </div>
               <div *ngIf="errorCodes.length > 0" class="form-group">
                 <p style="color: red;" *ngIf="errorCodes.indexOf(11000) != -1"> Email or Phone Already Exist</p>
