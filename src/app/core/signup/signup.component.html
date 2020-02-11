@@ -37,7 +37,7 @@
     </div>
 </form> -->
 
-<div class="container">
+<div class="container-fluid">
 
   <div class="card o-hidden border-0 shadow-lg my-5">
     <div class="card-body p-0">
@@ -50,11 +50,17 @@
               <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
             </div>
             <form class="user">
-              <div class="form-group ">
-                <!-- <div class="col-sm-6 mb-3 mb-sm-0"> -->
-                <input type="text" name="name" [(ngModel)]="user.name" class="form-control form-control-user"
-                  id="exampleFirstName" placeholder="First Name">
-                <!-- </div> -->
+              <div class="form-row">
+                <div class="form-group ">
+                  <label>first Name</label>
+                  <input type="text" name="name" [(ngModel)]="user.firstName" class="form-control form-control-user"
+                    id="exampleFirstName" placeholder="First Name">
+                </div>
+                <div class="form-group ">
+                  <label>last Name</label>
+                  <input type="text" name="name" [(ngModel)]="user.lastName" class="form-control form-control-user"
+                    id="exampleFirstName" placeholder="Last Name">
+                </div>
               </div>
               <div class="form-group">
                 <input type="email" name="email" [(ngModel)]="user.email" (keyup)="emailChanged()"
@@ -76,19 +82,29 @@
                     class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
                 </div>
               </div>
-              <!-- <div class="form-group">
-                <label for="">Role</label>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input [(ngModel)]="user.role" value="owner" type="radio" id="customRadioInline1"
-                    name="customRadioInline1" class="custom-control-input">
-                  <label class="custom-control-label" for="customRadioInline1">Owner</label>
+              <h3>Address</h3>
+              <div class="form-group">
+                <label for="">line 1</label>
+                <input type="text" name="" id="">
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="">city</label>
+                  <input type="text">
                 </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input [(ngModel)]="user.role" value="tenent" type="radio" id="customRadioInline2"
-                    name="customRadioInline1" class="custom-control-input">
-                  <label class="custom-control-label" for="customRadioInline2">Tenent</label>
+                <div class="form-group">
+                  <label for="">state</label>
+                  <input type="text">
                 </div>
-              </div> -->
+                <div class="form-group">
+                  <label for="">country</label>
+                  <input type="text">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="">user pan</label>
+                <input type="text" name="" id="">
+              </div>
               <div *ngIf="errorCodes.length > 0" class="form-group">
                 <p style="color: red;" *ngIf="errorCodes.indexOf(11000) != -1"> Email or Phone Already Exist</p>
               </div>
